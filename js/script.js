@@ -31,7 +31,7 @@ const SITE = {
   email:     'CedarBloomwellness@gmail.com',  
   phone:     '+1(856)-480-3545',
   address:   '238 W Chestnut Ave Ste 2, Vineland, NJ 08360',
-  mapQuery:  '238 W Chestnut Ave Ste 2, Vineland, NJ 08360',   // address used by the map
+  mapQuery:  '238 W Chestnut Ave Ste 2, Vineland, NJ 08360',  
   social: { instagram: '#', facebook: '#', tiktok: '#', x: '#', youtube: '#' }
 };
 
