@@ -25,9 +25,9 @@ function translateShared(el) {
    Cedar Bloom Wellness | site script
    ===================================================================== */
 const SITE = {
-  bookUrl:   '#',                      // AdvancedMD scheduling link
-  portalUrl: '#',                      // AdvancedMD patient portal link
-  payUrl:    '#',                      // credit card payment page link
+  bookUrl:   '#',                 
+  portalUrl: '#',                      
+  payUrl:    '#',                       
   email:     'CedarBloomwellness@gmail.com',  
   phone:     '+1(856)-480-3545',
   address:   '238 W Chestnut Ave Ste 2, Vineland, NJ 08360',
