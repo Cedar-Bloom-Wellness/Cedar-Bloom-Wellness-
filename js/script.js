@@ -286,3 +286,32 @@ function addLanguageSelector() {
   document.addEventListener('click', e => { if (!chooser.contains(e.target)) chooser.open = false; });
   chooser.addEventListener('keydown', e => { if (e.key === 'Escape') { chooser.open = false; summary.focus(); } });
 }
+
+/* Use clean page links on the live website */
+function useCleanPageLinks() {
+  if (!/^https?:$/.test(window.location.protocol)) return;
+
+  document.querySelectorAll("a[href]").forEach(function (link) {
+    const url = new URL(link.getAttribute("href"), document.baseURI);
+
+    if (url.origin !== window.location.origin) return;
+    if (!url.pathname.endsWith(".html")) return;
+
+    if (url.pathname.endsWith("/index.html")) {
+      url.pathname = url.pathname.replace(/index\.html$/, "");
+    } else {
+      url.pathname = url.pathname.replace(/\.html$/, "");
+    }
+
+    link.setAttribute(
+      "href",
+      url.pathname + url.search + url.hash
+    );
+  });
+}
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", useCleanPageLinks);
+} else {
+  useCleanPageLinks();
+}
